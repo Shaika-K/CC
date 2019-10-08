@@ -1,0 +1,2 @@
+# CnC
+Campaign Companion
