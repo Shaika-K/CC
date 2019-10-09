@@ -76,12 +76,15 @@ In my mind I would be picking up this app to supliment the dnd I already do
    - Extended Features:
       - About: alignment, appearance, personality, allies/enemies/family
       - Stats: inspiration, saving throws, passive wisdom perception
-      - Possesions: others 
-      
-DM controls level unlocks
-API to retrieve info on class, race, weapons, armour, spells, cantrips, currency, invocations, link to more
-Year book style NPC's (who, what, when, how, why, where)
-Grid map with each tile being 30ft with a type (forest, river, mountain, village, dunes to start off with. Then 3 layers deep and types dunes, swamp, galactic, mineral cave, mines, beaches, lakes sky, underwater...), infastructure such as buildings, interactive monuments statues/wells/trees, and initials for characters who dwel in the tile, pins for characters and destination/origin. (Filters may be needed ot view map).
-Log of episode so far filled in by anyone. (In future allow taggings charcters and NPC's and places)
-Calendar to book next game with exportable .ics (iCalendar) file.
-Virtual dice (d4,d6, d8,d10,d12,d20) with option to choose how many youd liek to roll at same time in the future.
+      - Possesions: others        
+- DM controls level unlocks
+- API to retrieve info on class, race, weapons, armour, spells, cantrips, currency, invocations, link to more
+- Year book style NPC's 
+   - Extended Features: (who, what, when, how, why, where)  
+- Grid map with each tile being 30ft with a type (forest, river, mountain, village, dunes to start off with. 
+   - Extended Features:
+      - Then 3 layers deep and types dunes, swamp, galactic, mineral cave, mines, beaches, lakes sky, underwater...), infastructure such as buildings, interactive monuments statues/wells/trees, and initials for characters who dwel in the tile, pins for characters and destination/origin. 
+      - (Filters may be needed ot view map).  
+- Log of episode so far filled in by anyone. (In future allow taggings charcters and NPC's and places)
+- Calendar to book next game with exportable .ics (iCalendar) file.
+- Virtual dice (d4,d6, d8,d10,d12,d20) with option to choose how many youd liek to roll at same time in the future.
