@@ -86,4 +86,4 @@ In my mind I would be picking up this app to supliment the dnd I already do
       - (Filters may be needed ot view map).  
 - Log of episode so far filled in by anyone. (In future allow taggings charcters and NPC's and places)
 - Calendar to book next game with exportable .ics (iCalendar) file.
-- Virtual dice (d4,d6, d8,d10,d12,d20) with option to choose how many youd liek to roll at same time in the future.
+- Virtual dice (d4,d6, d8,d10,d12,d20) with option to choose how many youd like to roll at same time in the future.
