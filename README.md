@@ -8,7 +8,7 @@ All entries are manual.
 
 ---
 
-### [Iteration 1](iteration1):
+### Iteration 1:
 #### Planning  
 Pain Points and Features  
   **What do I need as a player?**      
