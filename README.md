@@ -1,5 +1,4 @@
-# CnC
-### Campaign Companion
+# Campaign Companion
 ###### _Based of 5th Edition of Dungeons and Dragons_
 
 Campaign Companion is a mobile app for new Dungeons and Dragons (DnD) players and Dungeon Masters (DMs).
