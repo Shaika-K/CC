@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CC.Views.MyCharacter">
+    <ContentPage.Content>
+        <StackLayout>
+            <RelativeLayout 
+                BackgroundColor="Gray">
+                <BoxView Color="White"
+                         CornerRadius="50"
+                         WidthRequest="90"
+                         HeightRequest="90"
+                         HorizontalOptions="Start" 
+                         Margin="15, 35"/>
+                <Entry
+                    Placeholder="Character Name" 
+                    PlaceholderColor="LightGray"
+                    Margin="125, 25"
+                    WidthRequest="235"
+                    FontSize="25"
+                    MaxLength="16"/>
+                <Entry
+                    Placeholder="Level" 
+                    PlaceholderColor="LightGray"
+                    Margin="125, 80"
+                    WidthRequest="50"
+                    FontSize="15"
+                    MaxLength="16"
+                    Keyboard="Numeric"/>
+                <Entry
+                    Placeholder="Race" 
+                    PlaceholderColor="LightGray"
+                    Margin="195, 80"
+                    WidthRequest="70"
+                    FontSize="15"
+                    MaxLength="16"/>
+                <Entry
+                    Placeholder="Class" 
+                    PlaceholderColor="LightGray"
+                    Margin="290, 80"
+                    WidthRequest="70"
+                    FontSize="15"
+                    MaxLength="16"/>
+            </RelativeLayout>
+            <FlexLayout x:Name="TabLayout" BackgroundColor ="Black" Wrap="NoWrap" JustifyContent="SpaceBetween">
+                <Button Text="Tab 1"></Button>
+                <Button Text="Tab 2"></Button>
+                <Button Text="Tab 3"></Button>
+                <Button Text="Tab 4"></Button>
+                <Button Text="Tab 5"></Button>
+            </FlexLayout>            
+            <ScrollView BackgroundColor="DimGray">
+                <StackLayout>
+                    <Entry
+                    Placeholder="Character Name" 
+                    PlaceholderColor="LightGray"
+                    Margin="0, 15"
+                    MaxLength="16"/>
+                    <Entry
+                    Placeholder="Level" 
+                    PlaceholderColor="LightGray"
+                    MaxLength="16"/>
+                    <Entry
+                    Placeholder="Race" 
+                    PlaceholderColor="LightGray"
+                    MaxLength="16"/>
+                    <Editor
+                    Placeholder="Class" 
+                    PlaceholderColor="LightGray"
+                    MaxLength="16"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
