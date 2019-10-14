@@ -1,16 +1,14 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace CampaignCompanion
 {
-    public partial class App : Application
+    public class App : Application
     {
         public App()
         {
-            InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new CampaignCompanion.Views.MainPage();
         }
 
         protected override void OnStart()
