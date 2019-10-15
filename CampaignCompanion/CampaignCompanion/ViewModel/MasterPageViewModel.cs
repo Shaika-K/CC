@@ -30,6 +30,18 @@ namespace CampaignCompanion.ViewModel
                 IconSource = "todo.png",
                 TargetType = typeof(AllNpcsViewModel)
             });
+            ListView.Add(new MasterPageItem
+            {
+                Title = "Story",
+                IconSource = "todo.png",
+                TargetType = typeof(StoryViewModel)
+            });
+            ListView.Add(new MasterPageItem
+            {
+                Title = "Map",
+                IconSource = "todo.png",
+                TargetType = typeof(MapViewModel)
+            });
         }
     }
 }

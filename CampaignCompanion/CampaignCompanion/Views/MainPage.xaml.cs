@@ -22,19 +22,23 @@ namespace CampaignCompanion.Views
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
-                //TODO Switch statement
-                if (item.Title == "My Character")
-                {
-                    Detail = new NavigationPage(new MyCharacter());
-                    masterPage.listView.SelectedItem = null;
-                    IsPresented = false;
+
+                switch (item.Title) {
+                    case "All NPCs'":
+                        Detail = new NavigationPage(new AllNpcs());
+                        break;
+                    case "Story":
+                        Detail = new NavigationPage(new Story());
+                        break;
+                    case "Map":
+                        Detail = new NavigationPage(new Map());
+                        break;
+                    default:
+                        Detail = new NavigationPage(new MyCharacter());
+                        break;
                 }
-                else
-                {
-                    Detail = new NavigationPage(new AllNpcs());
-                    masterPage.listView.SelectedItem = null;
-                    IsPresented = false;
-                }
+                masterPage.listView.SelectedItem = null;
+                IsPresented = false;
             }
 
         }
