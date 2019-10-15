@@ -7,6 +7,7 @@
              mc:Ignorable="d"
              Padding="0,40,0,0"
 			 IconImageSource="hamburger.png"
+             BackgroundColor="#161616"
 			 Title="Campaign Companion"
              x:Class="CampaignCompanion.Views.MasterPage"
              xmlns:viewModel="clr-namespace:CampaignCompanion.ViewModel"
@@ -22,7 +23,7 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Image Source="{Binding IconSource}" />
-                            <Label Grid.Column="1" Text="{Binding Title}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" TextColor="#f4efe8"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

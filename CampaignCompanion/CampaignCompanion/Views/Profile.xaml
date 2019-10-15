@@ -6,10 +6,73 @@
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.Profile">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#C8B293">
+            <BoxView 
+                Color="#f4efe8"
+                CornerRadius="55"
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="Center" 
+                Margin="0, 35, 0, 0"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry
+                    Placeholder="First Name" 
+                    PlaceholderColor="#f4efe8"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#161616"
+                    MaxLength="200"
+                    WidthRequest="115"
+                    Grid.Row="0" Grid.Column="0"/>
+                <Entry
+                    Placeholder="Last Name" 
+                    PlaceholderColor="#f4efe8"
+                    FontSize="20"                    
+                    HorizontalTextAlignment="Center"
+                    TextColor="#161616"
+                    MaxLength="200"
+                    WidthRequest="115"
+                    Grid.Row="0" Grid.Column="1"/>
+            </Grid>           
+            <ScrollView BackgroundColor="#f4efe8">
+                <StackLayout>
+                    <Entry
+                    Placeholder="Level" 
+                    PlaceholderColor="RosyBrown"
+                    TextColor="#161616"
+                    Margin="0, 15, 0, 0"
+                    FontSize="15"
+                    Keyboard="Numeric"/>
+                    <Entry
+                    Placeholder="Race" 
+                    PlaceholderColor="RosyBrown"
+                    TextColor="#161616"
+                    FontSize="15"/>
+                    <Entry
+                    Placeholder="Class" 
+                    PlaceholderColor="RosyBrown"
+                    TextColor="#161616"
+                    FontSize="15"/>
+                    <Entry
+                    Placeholder="Age" 
+                    PlaceholderColor="RosyBrown"
+                    TextColor="#161616"
+                    FontSize="15"/>
+                    <Editor
+                    Placeholder="Background" 
+                    PlaceholderColor="RosyBrown"
+                    TextColor="#161616"
+                    HeightRequest="250"
+                    FontSize="15"/>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

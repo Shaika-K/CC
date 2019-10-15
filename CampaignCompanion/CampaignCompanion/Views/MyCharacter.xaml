@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.MyCharacter"
-            Title="My Character"
+             Title="My Character"
+             BarBackgroundColor="#073123"
              xmlns:local="clr-namespace:CampaignCompanion.Views;assembly=CampaignCompanion">
     <TabbedPage.Children>
         <local:Profile Title="Profile" BindingContext="{Binding ProfileViewTab}"/>
