@@ -22,10 +22,21 @@ namespace CampaignCompanion.Views
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-                masterPage.listView.SelectedItem = null;
-                IsPresented = false;
+                //TODO Switch statement
+                if (item.Title == "My Character")
+                {
+                    Detail = new NavigationPage(new MyCharacter());
+                    masterPage.listView.SelectedItem = null;
+                    IsPresented = false;
+                }
+                else
+                {
+                    Detail = new NavigationPage(new AllNpcs());
+                    masterPage.listView.SelectedItem = null;
+                    IsPresented = false;
+                }
             }
+
         }
     }
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 namespace CampaignCompanion.ViewModel
 {
-    public class AllNpcsViewModel : BindableObject
+    public class StatsAndSkillsViewModel : BindableObject
     {
-        public AllNpcsViewModel()
-        {
+        public StatsAndSkillsViewModel() {
         }
-}
+    }
 }

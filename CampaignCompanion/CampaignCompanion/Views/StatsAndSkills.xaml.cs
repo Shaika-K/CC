@@ -1,9 +1,9 @@
-﻿using CampaignCompanion.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CampaignCompanion.ViewModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,11 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace CampaignCompanion.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AllNpcs : ContentPage
+    public partial class StatsAndSkills : ContentPage
     {
-        public AllNpcs()
+        public StatsAndSkills()
         {
-            this.BindingContext = new AllNpcsViewModel();
+            this.BindingContext = new StatsAndSkillsViewModel();
             InitializeComponent();
         }
     }

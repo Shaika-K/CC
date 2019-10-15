@@ -11,11 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace CampaignCompanion.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AllNpcs : ContentPage
+    public partial class Profile : ContentPage
     {
-        public AllNpcs()
+        public Profile()
         {
-            this.BindingContext = new AllNpcsViewModel();
+            this.BindingContext = new ProfileViewModel();
             InitializeComponent();
         }
     }

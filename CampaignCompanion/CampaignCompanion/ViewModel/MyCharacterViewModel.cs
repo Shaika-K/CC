@@ -7,21 +7,22 @@ using Xamarin.Forms;
 
 namespace CampaignCompanion.ViewModel
 {
-    public class MyCharacterViewModel : ContentPage
+    public class MyCharacterViewModel : BindableObject
     {
+        public ProfileViewModel ProfileViewTab { set; get; }
+
+        public StatsAndSkillsViewModel StatsAndSkillsViewTab { set; get; }
+
+        public PossesionsViewModel PossesionsViewTab { set; get; }
+
+        public SpellsViewModel SpellsViewTab { set; get; }
+
         public MyCharacterViewModel()
         {
-            Title = "My Character Page";
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label {
-                        Text = "My Character",
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.CenterAndExpand
-                    }
-                }
-            };
+            ProfileViewTab = new ProfileViewModel();
+            StatsAndSkillsViewTab = new StatsAndSkillsViewModel();
+            PossesionsViewTab = new PossesionsViewModel();
+            SpellsViewTab = new SpellsViewModel();
         }
     }
 }

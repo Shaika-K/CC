@@ -17,7 +17,10 @@ namespace CampaignCompanion.Model
         public int Range { get; set; }
 
         public string Duration { get; set; }
-
+        
+        //(V)erbal, (S)omatic, (M)aterial, (F)ocus, (DF) Devine Focus, (XP)experience
         public List<string> Components { get; set; }
+
+        public List<string> ClassSpecific { get; set; }
     }
 }
