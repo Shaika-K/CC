@@ -29,7 +29,8 @@
                     HorizontalTextAlignment="Center"
                     TextColor="#161616"
                     MaxLength="200"
-                    WidthRequest="115"
+                    WidthRequest="115"                    
+                    HeightRequest="100"
                     Grid.Row="0" Grid.Column="0"/>
                 <Entry
                     Placeholder="Last Name" 
@@ -37,7 +38,8 @@
                     FontSize="20"                    
                     HorizontalTextAlignment="Center"
                     TextColor="#161616"
-                    MaxLength="200"
+                    MaxLength="200"                    
+                    HeightRequest="100"
                     WidthRequest="115"
                     Grid.Row="0" Grid.Column="1"/>
             </Grid>           

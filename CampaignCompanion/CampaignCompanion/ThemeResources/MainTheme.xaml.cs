@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CampaignCompanion.ViewModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CampaignCompanion.Views
+namespace CampaignCompanion.ThemeResources
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StatsAndSkills : ContentPage
+    public partial class MainTheme
     {
-        public StatsAndSkills()
+        public MainTheme()
         {
-            InitializeComponent();          
+            InitializeComponent();
         }
     }
 }

@@ -7,9 +7,9 @@
              x:Class="CampaignCompanion.Views.Possesions">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="currency, armour, weapon, vehicles, magical artifacts like potions, miccelanious"
+                VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -15,8 +15,8 @@ namespace CampaignCompanion.Views
     {
         public MyCharacter()
         {
-            this.BindingContext = new MyCharacterViewModel();
             InitializeComponent();
+            this.BindingContext = new MyCharacterViewModel();
         }
     }
 }

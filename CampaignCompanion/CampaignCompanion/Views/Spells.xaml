@@ -7,7 +7,7 @@
              x:Class="CampaignCompanion.Views.Spells">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Level, name, Description, CastingTime, Range, Duration, Components"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

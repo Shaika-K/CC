@@ -11,5 +11,10 @@ namespace CampaignCompanion.Model
         public Boolean IsProficient { get; set; }
 
         public int Ammount { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

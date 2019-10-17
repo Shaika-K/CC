@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CampaignCompanion.ThemeResources.MainTheme">
+
+    <!--Black-->
+    <Color x:Key="MainBlack">#161616</Color>
+    <!--Main Red-->
+    <Color x:Key="MainRed">#a71420</Color>
+    <!--Main White-->
+    <Color x:Key="MainWhite">#f3efe8</Color>
+    <!--Main Beige-->
+    <Color x:Key="MainBeige">#c8b293</Color>
+    <!--Main Green-->
+    <Color x:Key="MainGreen">#073123</Color>
+    <!--Main Brown-->
+    <Color x:Key="MainBrown">#5C3A2E</Color>
+    <!--Main Grey-->
+    <Color x:Key="MainGrey">#5B5C56</Color>
+</ResourceDictionary>

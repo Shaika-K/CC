@@ -21,6 +21,6 @@ namespace CampaignCompanion.Model
         //(V)erbal, (S)omatic, (M)aterial, (F)ocus, (DF) Devine Focus, (XP)experience
         public List<string> Components { get; set; }
 
-        public List<string> ClassSpecific { get; set; }
+        public Boolean ClassSpecific { get; set; }
     }
 }

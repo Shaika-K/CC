@@ -12,8 +12,7 @@ namespace CampaignCompanion.Views
     {
         public MainPage()
         {
-            InitializeComponent();
-
+            InitializeComponent();            
             masterPage.listView.ItemSelected += OnItemSelected;
         }
 
@@ -26,15 +25,19 @@ namespace CampaignCompanion.Views
                 switch (item.Title) {
                     case "All NPCs'":
                         Detail = new NavigationPage(new AllNpcs());
+                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                     case "Story":
                         Detail = new NavigationPage(new Story());
+                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                     case "Map":
                         Detail = new NavigationPage(new Map());
+                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                     default:
                         Detail = new NavigationPage(new MyCharacter());
+                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                 }
                 masterPage.listView.SelectedItem = null;

@@ -13,21 +13,51 @@
              xmlns:viewModel="clr-namespace:CampaignCompanion.ViewModel"
              x:DataType="{x:Type viewModel:MasterPageViewModel}">
     <StackLayout>
+        <Image Source="{Binding MyImageSource}" HeightRequest="200" BackgroundColor="PaleVioletRed"/>
+        <Label Text="Campaign Companion" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"/>
         <ListView x:Name="listView" x:FieldModifier="public" ItemsSource="{Binding ListView}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="5,10">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="40"/>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Image Source="{Binding IconSource}" />
-                            <Label Grid.Column="1" Text="{Binding Title}" TextColor="#f4efe8"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="15" TextColor="#f4efe8"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Picker x:Name="picker"
+        Title="Select a monkey"
+        TitleColor="Red" VerticalOptions="End">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Grid Padding="5,10" VerticalOptions="End" Margin="0,0,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40"/>                
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding MyImageSource}" BackgroundColor="BlueViolet"/>
+            <Label Grid.Column="1" Text="Player 1" FontSize="15" TextColor="#f4efe8"/>
+            <Image Source="{Binding MyImageSource}" BackgroundColor="LawnGreen"/>
+        </Grid>
     </StackLayout>
 </ContentPage>

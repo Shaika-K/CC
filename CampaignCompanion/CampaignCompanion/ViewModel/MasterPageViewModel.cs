@@ -15,8 +15,11 @@ namespace CampaignCompanion.ViewModel
 
         ListView listView;
 
+        public string MyImageSource;
+
         public MasterPageViewModel()
         {
+            MyImageSource = "img.png";
             ListView = new ObservableCollection<MasterPageItem>();
             ListView.Add(new MasterPageItem
             {
@@ -26,7 +29,7 @@ namespace CampaignCompanion.ViewModel
             });
             ListView.Add(new MasterPageItem
             {
-                Title = "All NPCs'",
+                Title = "All Story Characters",
                 IconSource = "todo.png",
                 TargetType = typeof(AllNpcsViewModel)
             });
@@ -39,6 +42,19 @@ namespace CampaignCompanion.ViewModel
             ListView.Add(new MasterPageItem
             {
                 Title = "Map",
+                IconSource = "todo.png",
+                TargetType = typeof(MapViewModel)
+            });
+            //TODO chnage to appropriate vm
+            ListView.Add(new MasterPageItem
+            {
+                Title = "Calendar",
+                IconSource = "todo.png",
+                TargetType = typeof(MapViewModel)
+            });
+            ListView.Add(new MasterPageItem
+            {
+                Title = "Dice",
                 IconSource = "todo.png",
                 TargetType = typeof(MapViewModel)
             });

@@ -10,8 +10,8 @@
              xmlns:local="clr-namespace:CampaignCompanion.Views;assembly=CampaignCompanion">
     <TabbedPage.Children>
         <local:Profile Title="Profile" BindingContext="{Binding ProfileViewTab}"/>
-        <local:StatsAndSkills Title="Stats and Skills" BindingContext="{Binding ProfileViewTab}"/>
-        <local:Possesions Title="Possesions" BindingContext="{Binding ProfileViewTab}"/>
-        <local:Spells Title="Spells" BindingContext="{Binding ProfileViewTab}"/>        
+        <local:StatsAndSkills Title="Stats and Skills" BindingContext="{Binding StatsAndSkillsViewTab}" />
+        <local:Possesions Title="Possesions" BindingContext="{Binding PossesionsViewTab}"/>
+        <local:Spells Title="Spells" BindingContext="{Binding SpellsViewTab}"/>        
     </TabbedPage.Children>
 </TabbedPage>
