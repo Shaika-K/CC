@@ -6,10 +6,31 @@
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.Map">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="5,5" VerticalOptions="End" Margin="0,0,0,10" BackgroundColor="GhostWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding MyImageSource}" Grid.Column="0" Grid.Row="0" BackgroundColor="#2E8B57"/>
+            <!--F8F8FF is ghost white-->
+            <Image Source="{Binding MyImageSource}" Grid.Column="1" Grid.Row="0" BackgroundColor="GhostWhite"/>
+            <!--A9A9A9 is dark gray-->
+            <Image Source="{Binding MyImageSource}" Grid.Column="2"  Grid.Row="0" BackgroundColor="DarkGray"/>
+            <Image Source="{Binding MyImageSource}" Grid.Column="0" Grid.Row="1" BackgroundColor="black"/>
+            <!--696969 is dim gray-->
+            <Image Source="{Binding MyImageSource}" Grid.Column="1" Grid.Row="1" BackgroundColor="DimGray"/>
+            <!--D3D3D3 is light gray-->
+            <Image Source="{Binding MyImageSource}" Grid.Column="2"  Grid.Row="1" BackgroundColor="LightGray"/>
+            <Image Source="{Binding MyImageSource}" Grid.Column="0" Grid.Row="2" BackgroundColor="#161616"/>
+            <!--DAA520 is goldenrod-->
+            <Image Source="{Binding MyImageSource}" Grid.Column="1" Grid.Row="2" BackgroundColor="Goldenrod"/>
+            <Image Source="{Binding MyImageSource}" Grid.Column="2"  Grid.Row="2" BackgroundColor="#B22222"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

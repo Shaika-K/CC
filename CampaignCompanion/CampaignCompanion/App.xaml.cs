@@ -8,8 +8,9 @@ namespace CampaignCompanion
     {
         public App()
         {
+            //MainPage = new NavigationPage(new CampaignCompanion.Views.MainPage());   
             MainPage = new CampaignCompanion.Views.MainPage();
-            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.Black);
+            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("161616"));
         }
 
         protected override void OnStart()

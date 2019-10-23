@@ -5,76 +5,186 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.Profile">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#C8B293">
-            <BoxView 
-                Color="#f4efe8"
-                CornerRadius="55"
-                WidthRequest="100"
-                HeightRequest="100"
-                HorizontalOptions="Center" 
-                Margin="0, 35, 0, 0"/>
-            <Grid HorizontalOptions="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Entry
-                    Placeholder="First Name" 
-                    PlaceholderColor="#f4efe8"
-                    FontSize="20"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#161616"
-                    MaxLength="200"
-                    WidthRequest="115"                    
-                    HeightRequest="100"
-                    Grid.Row="0" Grid.Column="0"/>
-                <Entry
-                    Placeholder="Last Name" 
-                    PlaceholderColor="#f4efe8"
-                    FontSize="20"                    
-                    HorizontalTextAlignment="Center"
-                    TextColor="#161616"
-                    MaxLength="200"                    
-                    HeightRequest="100"
-                    WidthRequest="115"
-                    Grid.Row="0" Grid.Column="1"/>
-            </Grid>           
-            <ScrollView BackgroundColor="#f4efe8">
-                <StackLayout>
+    <ContentPage.Content>          
+            <ScrollView BackgroundColor="GhostWhite">
+                <StackLayout>                    
+                    <Grid HorizontalOptions="Center" Padding="25,0,25,0" BackgroundColor="#B22222">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image 
+                        x:Name="profile" 
+                        Aspect="AspectFill" 
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Margin="0, 35, 0, 5"
+                        Grid.Row="0" Grid.Column="1"
+                        Grid.ColumnSpan="2"/>
+                    <Button 
+                        x:Name="photoButton"    
+                        Text="Pick Photo"
+                        Clicked="OnPickPhotoButtonClicked"
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Margin="0, 35, 0, 5"
+                        Grid.Row="0" Grid.Column="1"
+                        Grid.ColumnSpan="2"/>                    
                     <Entry
-                    Placeholder="Level" 
-                    PlaceholderColor="RosyBrown"
-                    TextColor="#161616"
-                    Margin="0, 15, 0, 0"
-                    FontSize="15"
-                    Keyboard="Numeric"/>
-                    <Entry
-                    Placeholder="Race" 
-                    PlaceholderColor="RosyBrown"
-                    TextColor="#161616"
-                    FontSize="15"/>
-                    <Entry
-                    Placeholder="Class" 
-                    PlaceholderColor="RosyBrown"
-                    TextColor="#161616"
-                    FontSize="15"/>
-                    <Entry
-                    Placeholder="Age" 
-                    PlaceholderColor="RosyBrown"
-                    TextColor="#161616"
-                    FontSize="15"/>
-                    <Editor
-                    Placeholder="Background" 
-                    PlaceholderColor="RosyBrown"
-                    TextColor="#161616"
-                    HeightRequest="250"
-                    FontSize="15"/>
+                            Placeholder="First Name" 
+                            PlaceholderColor="DarkGray"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            TextColor="GhostWhite"
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            MaxLength="200"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="150"                    
+                            HeightRequest="130"
+                            Grid.Row="1" Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+                        <Entry
+                            Placeholder="Last Name" 
+                            PlaceholderColor="DarkGray"
+                            FontSize="20"  
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            HorizontalTextAlignment="Center"
+                            TextColor="GhostWhite"
+                            MaxLength="200"                    
+                            HeightRequest="130"
+                            WidthRequest="150"
+                            Grid.Row="1" Grid.Column="2"
+                            Grid.ColumnSpan="2"/>
+                    </Grid>
+                    <Grid HorizontalOptions="Start" Padding="30,0,30,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="250" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            TextColor="DimGray"
+                            VerticalOptions="Center"
+                            Text="Level"
+                            Grid.Row="0" Grid.Column="0"/>
+                        <Entry
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            TextColor="#161616"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            Keyboard="Numeric"
+                            Grid.Row="0" Grid.Column="1"/>
+                        <Label
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            TextColor="DimGray"
+                            VerticalOptions="Center"
+                            Text="Race"
+                            Grid.Row="1" Grid.Column="0"/>
+                        <Picker
+                            x:Name="picker"
+                            Title="Select a Race"
+                            TitleColor="DarkGray"
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            TextColor="#161616"
+                            FontSize="15"
+                            Grid.Row="1" Grid.Column="1">
+                            <!--<Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Dragonborn</x:String>
+                                    <x:String>Dwarf</x:String>
+                                    <x:String>Eladrin</x:String>
+                                    <x:String>Elf</x:String>
+                                    <x:String>Gnome</x:String>
+                                    <x:String>Half-elf</x:String>
+                                    <x:String>Half-orc</x:String>
+                                    <x:String>Halfling</x:String>
+                                    <x:String>Human</x:String>
+                                    <x:String>Tiefling</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>-->
+                        </Picker>
+                        <Label
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            TextColor="DimGray"
+                            VerticalOptions="Center"
+                            Text="Class"
+                            Grid.Row="2" Grid.Column="0"/>
+                        <Picker
+                            x:Name="picker2"
+                            Title="Select a Class"
+                            TitleColor="DarkGray"
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            TextColor="#161616"
+                            FontSize="15"
+                            Grid.Row="2" Grid.Column="1">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Barbarian</x:String>
+                                    <x:String>Bard</x:String>
+                                    <x:String>Cleric</x:String>
+                                    <x:String>Druid</x:String>
+                                    <x:String>Fighter</x:String>
+                                    <x:String>Monk</x:String>
+                                    <x:String>Paladin</x:String>
+                                    <x:String>Ranger</x:String>
+                                    <x:String>Rogue</x:String>
+                                    <x:String>Sorcerer</x:String>
+                                    <x:String>Warlock</x:String>
+                                    <x:String>Wizard</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Label
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            TextColor="DimGray"
+                            VerticalOptions="Center"
+                            Text="Age"
+                            Grid.Row="3" Grid.Column="0"/>
+                        <Entry
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            TextColor="#161616"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            Keyboard="Numeric"
+                            Grid.Row="3" Grid.Column="1"/>
+                        <Label
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            TextColor="DimGray"
+                            VerticalOptions="Start"
+                            Text="Background"
+                            Grid.Row="4" Grid.Column="0"/>
+                        <Editor
+                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                            TextColor="#161616"
+                            Margin="0, 15, 0, 0"
+                            FontSize="15"
+                            Grid.Row="4" Grid.Column="1"/>
+                    </Grid>
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

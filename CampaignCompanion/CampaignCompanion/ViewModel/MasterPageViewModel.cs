@@ -1,4 +1,5 @@
 ﻿using CampaignCompanion.Model;
+using CampaignCompanion.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,47 +18,51 @@ namespace CampaignCompanion.ViewModel
 
         public string MyImageSource;
 
+        Button SettingsButton;
+
         public MasterPageViewModel()
         {
-            MyImageSource = "img.png";
+            MyImageSource = "cc.png";
+
             ListView = new ObservableCollection<MasterPageItem>();
             ListView.Add(new MasterPageItem
             {
                 Title = "My Character",
-                IconSource = "contacts.png",
+                IconSource = "characterwhite.png",
                 TargetType = typeof(MyCharacterViewModel)
             });
             ListView.Add(new MasterPageItem
             {
                 Title = "All Story Characters",
-                IconSource = "todo.png",
+                IconSource = "npcswhite.png",
                 TargetType = typeof(AllNpcsViewModel)
             });
             ListView.Add(new MasterPageItem
             {
                 Title = "Story",
-                IconSource = "todo.png",
+                IconSource = "storywhite.png",
                 TargetType = typeof(StoryViewModel)
             });
             ListView.Add(new MasterPageItem
             {
                 Title = "Map",
-                IconSource = "todo.png",
+                IconSource = "mapwhite.png",
                 TargetType = typeof(MapViewModel)
             });
             //TODO chnage to appropriate vm
             ListView.Add(new MasterPageItem
             {
                 Title = "Calendar",
-                IconSource = "todo.png",
+                IconSource = "calendarwhite.png",
                 TargetType = typeof(MapViewModel)
             });
             ListView.Add(new MasterPageItem
             {
                 Title = "Dice",
-                IconSource = "todo.png",
+                IconSource = "dicewhite.png",
                 TargetType = typeof(MapViewModel)
             });
         }
+        
     }
 }

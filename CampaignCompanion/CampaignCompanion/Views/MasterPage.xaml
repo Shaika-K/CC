@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="using:CampaignCompanion"
              mc:Ignorable="d"
-             Padding="0,40,0,0"
+             Padding="5,5,5,5"
 			 IconImageSource="hamburger.png"
              BackgroundColor="#161616"
 			 Title="Campaign Companion"
@@ -13,27 +13,35 @@
              xmlns:viewModel="clr-namespace:CampaignCompanion.ViewModel"
              x:DataType="{x:Type viewModel:MasterPageViewModel}">
     <StackLayout>
-        <Image Source="{Binding MyImageSource}" HeightRequest="200" BackgroundColor="PaleVioletRed"/>
-        <Label Text="Campaign Companion" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"/>
-        <ListView x:Name="listView" x:FieldModifier="public" ItemsSource="{Binding ListView}">
+        <Image Source="cc.png" HeightRequest="100" Margin="0,20,0,0"/>
+        <Label Text="Campaign Companion" TextColor="White" FontSize="30" FontFamily="BerkshireSwash-Regular.ttf#BerskshireSwash" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+        <ListView x:Name="listView" SeparatorColor="GhostWhite" x:FieldModifier="public" ItemsSource="{Binding ListView}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="5,10">
+                        <Grid Padding="5,5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="40"/>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image Source="{Binding IconSource}" />
-                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="15" TextColor="#f4efe8"/>
+                            <Image Source="{Binding IconSource}" Grid.Column="0"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="10" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"  TextColor="#f4efe8" VerticalTextAlignment="Center"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Picker x:Name="picker"
-        Title="Select a monkey"
-        TitleColor="Red" VerticalOptions="End">
+        <Picker 
+            x:Name="picker"
+            Title="Select a Campaign"
+            TitleColor="GhostWhite"
+            TextColor="GhostWhite"
+            VerticalOptions="End"
+            FontSize="15"
+            FontAttributes="Bold">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Baboon</x:String>
@@ -46,18 +54,16 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Grid Padding="5,10" VerticalOptions="End" Margin="0,0,0,10">
+        <Grid Padding="10,0" VerticalOptions="End" Margin="0,0,0,5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
              </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="40"/>                
+                <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
-            <Image Source="{Binding MyImageSource}" BackgroundColor="BlueViolet"/>
-            <Label Grid.Column="1" Text="Player 1" FontSize="15" TextColor="#f4efe8"/>
-            <Image Source="{Binding MyImageSource}" BackgroundColor="LawnGreen"/>
+            <Label Grid.Column="0" Margin="10,0,0,0" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab" VerticalTextAlignment="Center" Text="Player 1" FontSize="15" TextColor="#f4efe8"/>
+            <Button x:Name="SettingsButton" x:FieldModifier="public" Image="settingswhite.png"   BorderColor="Transparent" Scale="0.4" BackgroundColor="Transparent" Grid.Column="1" Margin="0,0,10,0"/>
         </Grid>
     </StackLayout>
 </ContentPage>

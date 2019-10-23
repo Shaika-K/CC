@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.MyCharacter"
              Title="My Character"
-             BarBackgroundColor="#073123"
+             BarBackgroundColor="Goldenrod"
              xmlns:local="clr-namespace:CampaignCompanion.Views;assembly=CampaignCompanion">
     <TabbedPage.Children>
         <local:Profile Title="Profile" BindingContext="{Binding ProfileViewTab}"/>

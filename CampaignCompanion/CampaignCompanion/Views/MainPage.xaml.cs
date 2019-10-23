@@ -12,8 +12,10 @@ namespace CampaignCompanion.Views
     {
         public MainPage()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            //NavigationPage.SetHasNavigationBar(this, false);
             masterPage.listView.ItemSelected += OnItemSelected;
+            masterPage.SettingsButton.Clicked += OnSettingsButtonClicked;
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -23,27 +25,39 @@ namespace CampaignCompanion.Views
             {
 
                 switch (item.Title) {
-                    case "All NPCs'":
+                    case "All Story Characters":
                         Detail = new NavigationPage(new AllNpcs());
-                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                     case "Story":
                         Detail = new NavigationPage(new Story());
-                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                     case "Map":
                         Detail = new NavigationPage(new Map());
-                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
+                        break;
+                        //TODO chnage the dice and calendar
+                    case "Calendar":
+                        Detail = new NavigationPage(new Map());
+                        break;
+                    case "Dice":
+                        Detail = new NavigationPage(new Map());
                         break;
                     default:
                         Detail = new NavigationPage(new MyCharacter());
-                        ((NavigationPage)Detail).BarBackgroundColor = Color.Black;
                         break;
                 }
+                ((NavigationPage)Detail).BarBackgroundColor = Color.FromHex("161616");
                 masterPage.listView.SelectedItem = null;
                 IsPresented = false;
             }
 
+        }
+
+        void OnSettingsButtonClicked(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new Settings());
+            ((NavigationPage)Detail).BarBackgroundColor = Color.FromHex("161616");
+            masterPage.listView.SelectedItem = null;
+            IsPresented = false;
         }
     }
 }

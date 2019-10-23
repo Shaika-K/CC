@@ -5,11 +5,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CampaignCompanion.Views.Possesions">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="currency, armour, weapon, vehicles, magical artifacts like potions, miccelanious"
-                VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+    <ContentPage.Content>        
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Currency" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222" Margin="5,25,5,0"/>
+                <Grid HorizontalOptions="Center" Padding="25,0,25,0" Margin="5,5,5,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Label FontFamily="RobotoSlab-Regular.ttf#RobotoSlab" Text="Characteristic Scores" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="15" FontAttributes="Bold"/>
+                    <Button ImageSource="addblack.png" HorizontalOptions="Center" Grid.Row="0" Scale="0.25" Grid.Column="4"/>
+                    <Entry FontFamily="RobotoSlab-Regular.ttf#RobotoSlab" Placeholder="0" TextColor="Goldenrod" Grid.Row="0" Grid.Column="5" HorizontalTextAlignment="Center" Keyboard="Numeric" FontSize="15" FontAttributes="Bold" VerticalOptions="End"/>
+                    <ImageButton Source="addblack.png" HorizontalOptions="Center" Grid.Row="0" Scale="0.5" Grid.Column="6"/>
+                    <ImageButton Source="addblack.png" HorizontalOptions="Center" Grid.Row="0" Scale="0.5" Grid.Column="7"/>
+                </Grid>
+                <Label Text="Armour" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222"/>
+                <Label Text="Weapons" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222"/>
+                <Label Text="Vehicles and Pets" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222"/>
+                <Label Text="Potions" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222"/>
+                <Label Text="Artefacts" TextColor="Goldenrod" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" BackgroundColor="#B22222"/>                
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
