@@ -28,7 +28,7 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Image Source="{Binding IconSource}" Grid.Column="0"/>
-                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="10" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"  TextColor="#f4efe8" VerticalTextAlignment="Center"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" FontSize="10" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"  TextColor="GhostWhite" VerticalTextAlignment="Center"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
@@ -62,7 +62,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Margin="10,0,0,0" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab" VerticalTextAlignment="Center" Text="Player 1" FontSize="15" TextColor="#f4efe8"/>
+            <Label Grid.Column="0" Margin="10,0,0,0" FontFamily="RobotoSlab-Regular.ttf#RobotoSlab" VerticalTextAlignment="Center" Text="Player 1" FontSize="15" TextColor="GhostWhite"/>
             <Button x:Name="SettingsButton" x:FieldModifier="public" Image="settingswhite.png"   BorderColor="Transparent" Scale="0.4" BackgroundColor="Transparent" Grid.Column="1" Margin="0,0,10,0"/>
         </Grid>
     </StackLayout>

@@ -18,10 +18,5 @@ namespace CampaignCompanion.Views
             InitializeComponent();
             this.BindingContext = new MasterPageViewModel();
         }
-
-        //async void GoToSettings(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new Settings());
-        //}
     }
 }
