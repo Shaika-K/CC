@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace CampaignCompanion.Model
@@ -19,7 +20,7 @@ namespace CampaignCompanion.Model
         public string Duration { get; set; }
         
         //(V)erbal, (S)omatic, (M)aterial, (F)ocus, (DF) Devine Focus, (XP)experience
-        public List<string> Components { get; set; }
+        public ObservableCollection<string> Components { get; set; }
 
         public Boolean ClassSpecific { get; set; }
     }

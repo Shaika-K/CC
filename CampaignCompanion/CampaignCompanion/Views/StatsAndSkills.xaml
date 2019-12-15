@@ -11,6 +11,9 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
+                <ListView Margin="30,0,30,25" BackgroundColor="#B22222" x:Name="Characteristics" x:FieldModifier="public" ItemsSource="{Binding Skills}">
+                    
+                </ListView>
                 <Grid HorizontalOptions="Center" Padding="25,0,25,0" Margin="5,25,5,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -421,7 +424,6 @@
                     <Label Text="Skills" Grid.Row="18" TextColor="Goldenrod" Grid.Column="1" Grid.ColumnSpan="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold"/>
                 </Grid>    
                 <!--Skills-->
-                
                 <ListView Margin="30,0,30,25" BackgroundColor="#B22222" x:Name="allSkills" x:FieldModifier="public" ItemsSource="{Binding Skills}">
                     <ListView.ItemTemplate>
                         <DataTemplate>

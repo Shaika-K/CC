@@ -36,33 +36,35 @@
                         HeightRequest="100"
                         Margin="0, 35, 0, 5"
                         Grid.Row="0" Grid.Column="1"
-                        Grid.ColumnSpan="2"/>                    
+                        Grid.ColumnSpan="2"/>
                     <Entry
-                            Placeholder="First Name" 
-                            PlaceholderColor="DarkGray"
-                            FontSize="20"
-                            HorizontalTextAlignment="Center"
-                            TextColor="GhostWhite"
-                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
-                            MaxLength="200"
-                            VerticalOptions="CenterAndExpand"
-                            WidthRequest="150"                    
-                            HeightRequest="130"
-                            Grid.Row="1" Grid.Column="0"
-                            Grid.ColumnSpan="2"/>
-                        <Entry
-                            Placeholder="Last Name" 
-                            PlaceholderColor="DarkGray"
-                            FontSize="20"  
-                            FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
-                            HorizontalTextAlignment="Center"
-                            TextColor="GhostWhite"
-                            MaxLength="200"                    
-                            HeightRequest="130"
-                            WidthRequest="150"
-                            Grid.Row="1" Grid.Column="2"
-                            Grid.ColumnSpan="2"/>
-                    </Grid>
+                        x:Name="firstName"
+                        Placeholder="First Name" 
+                        PlaceholderColor="DarkGray"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        TextColor="GhostWhite"
+                        FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                        MaxLength="200"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="150"                    
+                        HeightRequest="130"
+                        Grid.Row="1" Grid.Column="0"
+                        Grid.ColumnSpan="2"/>
+                    <Entry
+                        x:Name="lastName"
+                        Placeholder="Last Name" 
+                        PlaceholderColor="DarkGray"
+                        FontSize="18"  
+                        FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
+                        HorizontalTextAlignment="Center"
+                        TextColor="GhostWhite"
+                        MaxLength="200"                    
+                        HeightRequest="130"
+                        WidthRequest="150"
+                        Grid.Row="1" Grid.Column="2"
+                        Grid.ColumnSpan="2"/>
+                </Grid>
                     <Grid HorizontalOptions="Start" Padding="30,0,30,0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -84,6 +86,7 @@
                             Text="Level"
                             Grid.Row="0" Grid.Column="0"/>
                         <Entry
+                            x:Name="level"
                             FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
                             TextColor="#161616"
                             Margin="0, 15, 0, 0"
@@ -106,20 +109,6 @@
                             TextColor="#161616"
                             FontSize="15"
                             Grid.Row="1" Grid.Column="1">
-                            <!--<Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Dragonborn</x:String>
-                                    <x:String>Dwarf</x:String>
-                                    <x:String>Eladrin</x:String>
-                                    <x:String>Elf</x:String>
-                                    <x:String>Gnome</x:String>
-                                    <x:String>Half-elf</x:String>
-                                    <x:String>Half-orc</x:String>
-                                    <x:String>Halfling</x:String>
-                                    <x:String>Human</x:String>
-                                    <x:String>Tiefling</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>-->
                         </Picker>
                         <Label
                             FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
@@ -137,23 +126,7 @@
                             TextColor="#161616"
                             FontSize="15"
                             Grid.Row="2" Grid.Column="1">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Barbarian</x:String>
-                                    <x:String>Bard</x:String>
-                                    <x:String>Cleric</x:String>
-                                    <x:String>Druid</x:String>
-                                    <x:String>Fighter</x:String>
-                                    <x:String>Monk</x:String>
-                                    <x:String>Paladin</x:String>
-                                    <x:String>Ranger</x:String>
-                                    <x:String>Rogue</x:String>
-                                    <x:String>Sorcerer</x:String>
-                                    <x:String>Warlock</x:String>
-                                    <x:String>Wizard</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
+                    </Picker>
                         <Label
                             FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
                             Margin="0, 15, 0, 0"
@@ -163,6 +136,7 @@
                             Text="Age"
                             Grid.Row="3" Grid.Column="0"/>
                         <Entry
+                            x:Name="age"
                             FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
                             TextColor="#161616"
                             Margin="0, 15, 0, 0"
@@ -178,6 +152,7 @@
                             Text="Background"
                             Grid.Row="4" Grid.Column="0"/>
                         <Editor
+                            x:Name="background"
                             FontFamily="RobotoSlab-Regular.ttf#RobotoSlab"
                             TextColor="#161616"
                             Margin="0, 15, 0, 0"

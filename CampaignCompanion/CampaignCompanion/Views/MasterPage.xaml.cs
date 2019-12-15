@@ -17,6 +17,7 @@ namespace CampaignCompanion.Views
         {
             InitializeComponent();
             this.BindingContext = new MasterPageViewModel();
+            player.Text = Constants.DummyUser.Username;
         }
     }
 }

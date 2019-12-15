@@ -22,7 +22,7 @@ namespace CampaignCompanion.ViewModel
 
         public MasterPageViewModel()
         {
-            MyImageSource = "cc.png";
+            MyImageSource = "cc.png";            
 
             ListView = new ObservableCollection<MasterPageItem>();
             ListView.Add(new MasterPageItem

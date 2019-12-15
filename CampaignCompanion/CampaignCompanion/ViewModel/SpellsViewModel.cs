@@ -21,7 +21,7 @@ namespace CampaignCompanion.ViewModel
                     Level = 5,
                     CastingTime = "1 min",
                     Range = 5,
-                    Components = new List<string> {"V","M" },
+                    Components = new ObservableCollection<string> {"V","M" },
                     ClassSpecific = false
                 }
             };

@@ -23,6 +23,14 @@ namespace CampaignCompanion.Views
             InitializeComponent();
             picker.ItemsSource = Constants.AllRaces;
             picker2.ItemsSource = Constants.AllClasses;
+            firstName.Text = Constants.DummyCharacter.FirstName;
+            lastName.Text = Constants.DummyCharacter.LastName;
+            level.Text = Constants.DummyCharacter.Level.ToString();
+            picker.SelectedIndex = picker.ItemsSource.IndexOf(Constants.DummyCharacter.Race);
+            picker2.SelectedIndex = picker2.ItemsSource.IndexOf(Constants.DummyCharacter.Class);
+            age.Text = Constants.DummyCharacter.Age.ToString();
+            background.Text = Constants.DummyCharacter.Background;
+            //image.ImageSource = Constants.DummyCharacter.LastName;
         }
 
         async void OnPickPhotoButtonClicked(object sender, EventArgs e)

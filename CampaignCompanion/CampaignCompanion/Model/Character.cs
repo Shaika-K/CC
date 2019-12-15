@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -7,11 +8,13 @@ using Xamarin.Forms;
 
 namespace CampaignCompanion.Model
 {
-    public class MyCharacter
+    public class Character
     {
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public int Age { get; set; }
 
         public int Level { get; set; }
 
@@ -24,11 +27,15 @@ namespace CampaignCompanion.Model
         public Stat Stats { get; set; }
 
         //List of spells, cantrips and inovations that inherit type Spell
-        public List<Spell> Spells { get; set; }
+        public ObservableCollection<Spell> Spells { get; set; }
 
-        public List<Skill> Skills { get; set; }
+        public ObservableCollection<Skill> Skills { get; set; }
 
         //should be a type called Wearable or something
-        public List<string> Possesions { get; set; }      
+        public ObservableCollection<Entity> Possesions { get; set; }
+
+        public ObservableCollection<Entity> Money { get; set; }
+
+        public Image ProfilePic { get; set; }
     }
 }
