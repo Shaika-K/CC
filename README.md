@@ -5,6 +5,8 @@ Campaign Companion is a mobile app for new Dungeons and Dragons (DnD) players an
 This app is meant for custom campaigns where the story and world does not need to follow the official DnD examples.
 All entries are manual.
 
+This project is made with Firebase and Xamarin.
+
 ---
 
 ### Iteration 1:
